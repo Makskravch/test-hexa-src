@@ -1,0 +1,102 @@
+.header {
+
+	nav {
+		margin-right: -24px;
+	}
+
+	&__top-container {
+		@extend %center_block;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 15px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 14px 0 9px;
+		background-color: $white_0;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			@include font(30px, 30px, "ProximaNova-Regular");
+
+			margin-right: 23px;
+			color: $black_0;
+			letter-spacing: 9px;
+			text-transform: uppercase;
+		}
+
+		p {
+			@include font(13px, 13px, "ProximaNova-Regular");
+
+			text-transform: uppercase;
+		}
+	}
+
+	&__call {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			@include font(34px, 34px, "ProximaNova-Bold");
+
+			margin-right: 20px;
+			color: $black_0;
+		}
+
+		button {
+			@include font(13px, 13px, "ProximaNova-Bold");
+
+			position: relative;
+			padding: 8px 10px;
+			border: 0;
+			border-radius: 3px;
+			color: $white_0;
+			overflow: hidden;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 100%;
+				width: 100%;
+				background: linear-gradient(to bottom, $orange_0 0%, $pink_0 100%);
+				transition: height 0.2s;
+			}
+
+			&:hover {
+
+				&::before {
+					height: 200%;
+				}
+			}
+
+			span {
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
+
+	&__bottom {
+		background-color: $black_1;
+	}
+
+	&__bottom-container {
+		@extend %center_block;
+
+		padding: 0 15px;
+	}
+}

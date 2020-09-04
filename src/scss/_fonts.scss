@@ -1,10 +1,50 @@
 @font-face {
-	font-family: '';
-	src: url('../fonts/.eot');
-	src: url('../fonts/.eot?#iefix') format('embedded-opentype'),
-				url('../fonts/.ttf') format('truetype'),
-				url('../fonts/.woff') format('woff'),
-				url('../fonts/.woff2') format('woff2');
+	font-family: 'Intro-Black-Italic';
+	src: url('../fonts/Intro-Black-Italic/Intro-Black-Italic.eot');
+	src: url('../fonts/Intro-Black-Italic/Intro-Black-Italic.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/Intro-Black-Italic/Intro-Black-Italic.ttf') format('truetype'),
+				url('../fonts/Intro-Black-Italic/Intro-Black-Italic.woff') format('woff'),
+				url('../fonts/Intro-Black-Italic/Intro-Black-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Intro-Black';
+	src: url('../fonts/Intro-Black/Intro-Black.eot');
+	src: url('../fonts/Intro-Black/Intro-Black.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/Intro-Black/Intro-Black.ttf') format('truetype'),
+				url('../fonts/Intro-Black/Intro-Black.woff') format('woff'),
+				url('../fonts/Intro-Black/Intro-Black.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Intro-Regular';
+	src: url('../fonts/Intro-Regular/Intro-Regular.eot');
+	src: url('../fonts/Intro-Regular/Intro-Regular.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/Intro-Regular/Intro-Regular.ttf') format('truetype'),
+				url('../fonts/Intro-Regular/Intro-Regular.woff') format('woff'),
+				url('../fonts/Intro-Regular/Intro-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ProximaNova-Bold';
+	src: url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot');
+	src: url('../fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf') format('truetype'),
+				url('../fonts/ProximaNova-Bold/ProximaNova-Bold.woff') format('woff'),
+				url('../fonts/ProximaNova-Bold/ProximaNova-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ProximaNova-Regular';
+	src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot');
+	src: url('../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf') format('truetype'),
+				url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'),
+				url('../fonts/ProximaNova-Regular/ProximaNova-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }

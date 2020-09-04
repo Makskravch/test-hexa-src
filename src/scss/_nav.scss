@@ -1,0 +1,65 @@
+.nav {
+
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	li {
+		
+		&:first-child {
+
+			a {
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	a {
+		@include font(14px, 14px, "ProximaNova-Regular");
+
+		position: relative;
+		display: block;
+		padding: 10px 68px;
+		color: $white_0;
+		text-transform: uppercase;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 14px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background-color: $white_0;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 1px;
+			bottom: 5px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: $white_0;
+			transition: width 0.2s;
+		}
+
+		&:hover {
+
+			&::after {
+				width: 50%;
+			}
+		}
+
+		&.active {
+			font-family: "ProximaNova-Bold";
+		}
+	}
+}

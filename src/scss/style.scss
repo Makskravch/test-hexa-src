@@ -5,9 +5,10 @@
 @import "mixins";
 @import "reset";
 @import "global";
-@import "Slick/slick", "Slick/slick-theme";
 
 // Components
+@import "Slick/slick", "Slick/slick-theme";
 @import "header";
+@import "nav";
 
 // Pages
