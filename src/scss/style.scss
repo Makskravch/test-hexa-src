@@ -1,0 +1,14 @@
+// Initial
+@import "fonts";
+@import "variables";
+@import "extends";
+@import "mixins";
+@import "reset";
+@import "global";
+@import "Slick/slick", "Slick/slick-theme";
+
+// General
+@import "general/header/header";
+@import "general/footer/footer";
+
+// Pages
