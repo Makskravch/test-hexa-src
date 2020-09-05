@@ -2,6 +2,10 @@
 	overflow: hidden;
 }
 
+.blur {
+	filter: blur(8px);
+}
+
 .is-hidden {
 	opacity: 0;
 	visibility: hidden;

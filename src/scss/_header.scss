@@ -1,7 +1,66 @@
 .header {
+	position: sticky;
+	top: 0;
+	z-index: 9;
 
 	nav {
 		margin-right: -24px;
+		transition: transform 0.2s;
+
+		@include respond-to(desktop_minus) {
+			margin-right: 0;
+		}
+
+		@media only screen and (max-width: $tablet-plus) {
+			position: fixed;
+			top: 57px;
+			width: 100%;
+			height: calc(100% - 57px);
+			transform: translateY(calc(-100% - 57px));
+			background: $black_1;
+			padding: 20px;
+		}
+
+		@include respond-to(mobile) {
+			height: calc(100% - 53px);
+			top: 53px;
+		}
+
+		&.is-active {
+			transform: translateY(0);
+		}
+
+		ul {
+
+			@media only screen and (max-width: $tablet-plus) {
+				flex-direction: column;
+				align-items: stretch;
+				overflow-y: auto;
+			}
+		}
+
+		li {
+
+			@media only screen and (max-width: $tablet-plus) {
+				margin: 10px 0;
+			}
+		}
+
+		a {
+			padding: 10px 68px;
+			text-align: center;
+
+			@include respond-to(desktop_minus) {
+				padding: 10px 45px;
+			}
+
+			&::before {
+
+				@media only screen and (max-width: $tablet-plus) {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&__top-container {
@@ -14,11 +73,13 @@
 	}
 
 	&__top {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 14px 0 9px;
 		background-color: $white_0;
+		z-index: 1;
 	}
 
 	&__logo {
@@ -33,12 +94,20 @@
 			color: $black_0;
 			letter-spacing: 9px;
 			text-transform: uppercase;
+
+			@media only screen and (max-width: $tablet-plus) {
+				margin-right: 0;
+			}
 		}
 
 		p {
 			@include font(13px, 13px, "ProximaNova-Regular");
 
 			text-transform: uppercase;
+
+			@media only screen and (max-width: $tablet-plus) {
+				display: none;
+			}
 		}
 	}
 
@@ -47,11 +116,19 @@
 		align-items: center;
 		justify-content: space-between;
 
+		@media only screen and (max-width: $tablet-plus) {
+			margin-left: auto;
+		}
+
 		a {
 			@include font(34px, 34px, "ProximaNova-Bold");
 
 			margin-right: 20px;
 			color: $black_0;
+
+			@include respond-to(mobile) {
+				display: none;
+			}
 		}
 
 		button {
@@ -92,11 +169,75 @@
 
 	&__bottom {
 		background-color: $black_1;
+
+		@media only screen and (max-width: $tablet-plus) {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+		}
 	}
 
 	&__bottom-container {
 		@extend %center_block;
 
 		padding: 0 15px;
+
+		@media only screen and (max-width: $tablet-plus) {
+			padding: 0;
+		}
+	}
+
+	.menu-btn {
+		display: none;
+		position: relative;
+		height: 18px;
+		width: 22px;
+		margin-left: 15px;
+		overflow: hidden;
+
+		@media only screen and (max-width: $tablet-plus) {
+			display: block;
+		}
+
+		&.is-active {
+
+			span {
+
+				&:first-child {
+					transform: rotate(-45deg);
+				}
+				
+				&:nth-child(2) {
+					transform: translateX(100%);
+				}
+
+				&:last-child {
+					transform: rotate(45deg);
+				}
+			}
+		}
+
+		span {
+			position: absolute;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $black_0;
+			transform-origin: right center;
+			transition: all 0.2s;
+			
+			&:first-child {
+				top: 0;
+			}
+			
+			&:nth-child(2) {
+				top: calc(50% - 1px);
+			}
+			
+			&:last-child {
+				bottom: 0;
+			}
+		}
 	}
 }

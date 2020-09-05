@@ -1,0 +1,464 @@
+.slider {
+	position: relative;
+	margin-top: -34px;
+
+	@media only screen and (max-width: $tablet-plus) {
+		margin-top: 0;
+	}
+
+	&__content {
+		position: absolute;
+		top: 70px;
+		left: 0;
+		width: 100%;
+		text-transform: uppercase;
+		z-index: 1;
+		pointer-events: none;
+
+		div {
+			@extend %center_block;
+
+			padding: 0 15px;
+
+			@include respond-to(desktop_minus) {
+				padding: 0 55px;
+			}
+
+			@include respond-to(mobile_portrait) {
+				padding: 0 30px;
+			}
+		}
+
+		h1 {
+			@include font(90px, 90px, "Intro-Black");
+
+			position: relative;
+			display: inline-block;
+			padding: 11px 19px 8px;
+			margin-bottom: 97px;
+
+			@include respond-to(mobile) {
+				@include font(60px, 60px, "Intro-Black");
+
+				margin-bottom: 90px;
+			}
+
+			@include respond-to(mobile_portrait) {
+				@include font(30px, 30px, "Intro-Black");
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 3px;
+				height: 100%;
+				width: 100%;
+				transform: skewX(-16deg);
+				background-color: $white_1;
+				z-index: -1;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -20px;
+				height: calc(100% + 74px);
+				width: 3px;
+				background-color: $white_1;
+				transform: skewX(-16deg);
+
+				@include respond-to(mobile_portrait) {
+					left: -14px;
+					height: calc(100% + 50px);
+				}
+			}
+		}
+
+		p {
+			@include font(19px, 23px, "ProximaNova-Bold");
+
+
+			margin-bottom: 20px;
+			color: $white_0;
+
+			@include respond-to(mobile) {
+				margin-bottom: 30px;
+			}
+
+			@include respond-to(mobile_portrait) {
+				@include font(16px, 20px, "ProximaNova-Bold");
+			}
+		}
+
+		a {
+			@include font(23px, 23px, "ProximaNova-Bold");
+
+			display: inline-block;
+			padding: 11px 17px;
+			color: $white_0;
+			border: 2px solid $white_0;
+			border-radius: 4px;
+			background: linear-gradient(to bottom, $orange_0 0%, $pink_0 100%);
+			transition: transform 0.2s;
+			pointer-events: all;
+
+			@include respond-to(mobile_portrait) {
+				@include font(16px, 20px, "ProximaNova-Bold");
+
+				padding: 10px 15px;
+			}
+
+			&:hover {
+
+				@include respond-to(desktop_plus) {
+					transform: translateX(10px);
+				}
+			}
+		}
+	}
+
+	&__list {
+
+		&.slick-dotted.slick-slider {
+			margin-bottom: 0;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		picture {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			z-index: -1;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 62%;
+				height: calc(100% - 278px);
+				width: 100%;
+				background-color: $black_2;
+				transform: skewX(-15deg);
+
+				@include respond-to(desktop_minus) {
+					height: 100%;
+				}
+			}
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		div {
+			@extend %center_block;
+
+			display: flex;
+			align-items: center;
+			padding: 189px 15px 545px;
+
+			@include respond-to(desktop_minus) {
+				padding: 189px 55px 267px;
+			}
+
+			@include respond-to(mobile) {
+				padding: 170px 62px 267px;
+			}
+
+			@include respond-to(mobile_portrait) {
+				padding: 136px 36px 267px;
+			}
+
+			p {
+				position: relative;
+
+				&:first-child {
+					@include font(36px, 20px, "Intro-Black-Italic");
+
+					padding: 14px 34px 27px;
+					margin-right: 52px;
+
+					@include respond-to(mobile) {
+						@include font(20px, 16px, "Intro-Black-Italic");
+
+						padding: 14px 34px 17px;
+					}
+
+					@include respond-to(mobile_portrait) {
+						@include font(18px, 12px, "Intro-Black-Italic");
+
+						padding: 10px 14px;
+						margin-right: 34px;
+					}
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						height: 100%;
+						width: calc(100%  + 45px);
+						transform: skewX(-16deg) translate(-50%, -50%);
+						background-color: $white_1;
+						margin-left: -9px;
+						z-index: -1;
+
+						@include respond-to(mobile_portrait) {
+							width: calc(100% + 32px);
+						}
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						left: 50%;
+						bottom: 9px;
+						transform: translateX(-50%);
+						height: 3px;
+						width: 98%;
+						margin-left: -4px;
+						background-color: $black_0;
+
+						@include respond-to(mobile_portrait) {
+							bottom: 4px;
+							height: 2px;
+						}
+					}
+				}
+
+				&:nth-child(2) {
+					@include font(20px, 20px, "Intro-Black");
+
+					margin-bottom: -15px;
+					color: $white_0;
+
+					@include respond-to(mobile) {
+						@include font(16px, 20px, "Intro-Black");
+					}
+
+					@include respond-to(mobile_portrait) {
+						@include font(16px, 16px, "Intro-Black");
+					}
+
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						height: 180%;
+						width: calc(100%  + 45px);
+						margin: -5px 0 0 -6px;
+						transform: skewX(-16deg) translate(-50%, -50%);
+						background: linear-gradient(to right, $green_0 0, $green_1 100%);
+						z-index: -1;
+
+						@include respond-to(mobile_portrait) {
+							width: calc(100%  + 32px);
+						}
+					}
+
+					span {
+						@include font(45px, 20px, "Intro-Black");
+
+						@include respond-to(mobile) {
+							@include font(26px, 20px, "Intro-Black");
+						}
+
+						@include respond-to(mobile_portrait) {
+							@include font(24px, 16px, "Intro-Black");
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__controls {
+		@extend %center_block;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, 41px);
+		display: flex;
+		padding: 0 15px;
+
+		@include respond-to(desktop_minus) {
+			top: 410px;
+			padding: 0 55px;
+		}
+
+		@media only screen and (max-width: $tablet-plus) {
+			top: 440px;
+			transform: translate(-50%, 0);
+		}
+
+		@include respond-to(mobile) {
+			display: none;
+		}
+
+		.slick-prev {
+			position: static;
+			transform: unset;
+			height: 40px;
+			width: 25px;
+			order: 1;
+
+			@include respond-to(desktop_minus) {
+				height: 26px;
+				width: 16px;
+			}
+
+			&::before {
+				@include background(url("../img/slider/arrow-prev.png"), top, left, contain);
+
+				content: '';
+				display: block;
+				height: 100%;
+				width: 100%;
+				opacity: 1;
+			}
+		}
+
+		.slick-next {
+			position: static;
+			transform: unset;
+			height: 40px;
+			width: 25px;
+			order: 3;
+
+			@include respond-to(desktop_minus) {
+				height: 26px;
+				width: 16px;
+			}
+
+			&::before {
+				@include background(url("../img/slider/arrow-next.png"), top, left, contain);
+
+				content: '';
+				display: block;
+				height: 100%;
+				width: 100%;
+				opacity: 1;
+			}
+		}
+
+		.slick-dots {
+			position: static;
+			display: flex;
+			align-items: center;
+			width: auto;
+			margin: 0 28px;
+			order: 2;
+
+			@include respond-to(desktop_minus) {
+				margin: 0 20px;
+			}
+
+			li {
+				height: 18px;
+				width: 18px;
+				margin: 0 6px;
+
+				&.slick-active {
+
+					button {
+
+						&::before {
+							opacity: 1;
+						}
+					}
+				}
+				
+				button {
+					position: relative;
+					height: 16px;
+					width: 16px;
+					border: 2px solid $white_0;
+					border-radius: 50%;
+
+					@include respond-to(desktop_minus) {
+						height: 12px;
+						width: 12px;
+					}
+
+					&::before {
+						content: '';
+						width: 8px;
+						height: 8px;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						background-color: $white_0;
+						border-radius: 50%;
+						opacity: 0;
+
+						@include respond-to(desktop_minus) {
+							height: 6px;
+							width: 6px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__info {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: $white_1;
+
+		@include respond-to(desktop_minus) {
+			position: relative;
+		}
+
+		ul {
+			@extend %center_block;
+
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li {
+			width: 25%;
+			padding: 20px 15px 14px;
+
+			@media only screen and (max-width: $tablet-plus) {
+				width: 50%;
+			}
+
+			@include respond-to(mobile_portrait) {
+				width: 100%;
+			}
+
+			div {
+				margin-bottom: 17px;
+			}
+			
+			h4 {
+				@include font(22px, 22px, "ProximaNova-Bold");
+
+				margin-bottom: 7px;
+				text-align: center;
+			}
+
+			p {
+				@include font(16px, 20px, "ProximaNova-Regular");
+
+				text-align: center;
+			}
+		}
+	}
+}

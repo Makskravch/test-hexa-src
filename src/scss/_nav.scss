@@ -28,6 +28,10 @@
 		color: $white_0;
 		text-transform: uppercase;
 
+		@include respond-to(desktop_minus) {
+			padding: 10px 45px;
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
